@@ -8,15 +8,25 @@
 
 import UIKit
 
-class ViewController: UIViewController , Injectable{
+final class ViewController: UIViewController{
+    
     
     @IBOutlet weak var label: UILabel!
+    
+    private var apiClient : APIClient!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.label.text = "lauch!"
+        self.setup()
+    }
+    
+    private func setup(){
+        
+        apiClient.response(from: MockRequest()) { (result) in
+            self.label.text = result.first
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -24,6 +34,17 @@ class ViewController: UIViewController , Injectable{
         // Dispose of any resources that can be recreated.
     }
     
-    
 }
 
+extension ViewController: Injectable {
+    
+    typealias Dependency = APIClient
+    static func make(withDependency dependency: APIClient) -> ViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let viewController = storyboard.instantiateInitialViewController() as! ViewController
+        viewController.apiClient = dependency
+        
+        return viewController
+    }
+}

@@ -11,5 +11,6 @@ import Foundation
 protocol Injectable {
     //Protocolに関する型をプロトコルの一部として定義する
     associatedtype Dependency
-    init(with dependency:Dependency)
+    
+    static func make(withDependency dependency: Dependency) -> Self
 }

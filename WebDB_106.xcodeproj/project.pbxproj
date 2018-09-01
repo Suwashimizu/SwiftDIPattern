@@ -15,6 +15,9 @@
 		A0640FE3213A3A51004747E8 /* WebDB_106Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0640FE2213A3A51004747E8 /* WebDB_106Tests.swift */; };
 		A0640FEE213A3A51004747E8 /* WebDB_106UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0640FED213A3A51004747E8 /* WebDB_106UITests.swift */; };
 		A0640FFD213A3BD0004747E8 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0640FFC213A3BD0004747E8 /* Injectable.swift */; };
+		A0641000213A3FD9004747E8 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0640FFF213A3FD9004747E8 /* APIRequest.swift */; };
+		A0641002213A4007004747E8 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0641001213A4007004747E8 /* APIClient.swift */; };
+		A0641004213A419D004747E8 /* APIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0641003213A419D004747E8 /* APIMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		A0640FED213A3A51004747E8 /* WebDB_106UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDB_106UITests.swift; sourceTree = "<group>"; };
 		A0640FEF213A3A51004747E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0640FFC213A3BD0004747E8 /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
+		A0640FFF213A3FD9004747E8 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		A0641001213A4007004747E8 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		A0641003213A419D004747E8 /* APIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		A0640FCC213A3A4A004747E8 /* WebDB_106 */ = {
 			isa = PBXGroup;
 			children = (
+				A0640FFE213A3FC7004747E8 /* service */,
 				A0640FFB213A3BB6004747E8 /* di */,
 				A0640FCD213A3A4A004747E8 /* AppDelegate.swift */,
 				A0640FCF213A3A4A004747E8 /* ViewController.swift */,
@@ -134,6 +141,16 @@
 				A0640FFC213A3BD0004747E8 /* Injectable.swift */,
 			);
 			path = di;
+			sourceTree = "<group>";
+		};
+		A0640FFE213A3FC7004747E8 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				A0640FFF213A3FD9004747E8 /* APIRequest.swift */,
+				A0641001213A4007004747E8 /* APIClient.swift */,
+				A0641003213A419D004747E8 /* APIMock.swift */,
+			);
+			path = service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,8 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0641004213A419D004747E8 /* APIMock.swift in Sources */,
+				A0641000213A3FD9004747E8 /* APIRequest.swift in Sources */,
 				A0640FD0213A3A4A004747E8 /* ViewController.swift in Sources */,
 				A0640FFD213A3BD0004747E8 /* Injectable.swift in Sources */,
+				A0641002213A4007004747E8 /* APIClient.swift in Sources */,
 				A0640FCE213A3A4A004747E8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
