@@ -12,6 +12,7 @@ final class ViewController: UIViewController{
     
     
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var label2: UILabel!
     
     private var apiClient : APIClient!
     
@@ -26,6 +27,7 @@ final class ViewController: UIViewController{
         
         apiClient.response(from: MockRequest()) { (result) in
             self.label.text = result.first
+            self.label2.text = result[1]
         }
     }
     

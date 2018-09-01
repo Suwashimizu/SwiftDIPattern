@@ -16,6 +16,6 @@ class MockAPIClient:APIClient {
     func response<R:APIRequest>(
         from request:R,
         completion: ((R.Response) -> ())?) {
-        completion?(["test"] as! R.Response)
+        completion?(["test","test2"] as! R.Response)
     }
 }
